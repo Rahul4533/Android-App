@@ -1,0 +1,6 @@
+{
+  "name": "Santosh Khata",
+  "description": "Digital Udhar Khata for Santosh Kirana Store to track customer credit, items, photos, and payment history.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

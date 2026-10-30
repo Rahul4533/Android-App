@@ -1,0 +1,141 @@
+{
+  "entities": {
+    "Customer": {
+      "title": "Customer",
+      "description": "A Kirana store customer with udhar/jama ledger balances and photo.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The authenticated shopkeeper UID who owns this customer record."
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name of the customer."
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number or landmark note for the customer."
+        },
+        "photoBase64": {
+          "type": "string",
+          "description": "Compact Base64 thumbnail photo or preset avatar identifier."
+        },
+        "netBalance": {
+          "type": "integer",
+          "description": "Current net balance in INR (positive = Udhar due, negative = Advance jama, 0 = settled)."
+        },
+        "totalUdhar": {
+          "type": "integer",
+          "description": "Cumulative Udhar (credit given) in INR."
+        },
+        "totalJama": {
+          "type": "integer",
+          "description": "Cumulative Jama (payment received) in INR."
+        },
+        "lastItemsSummary": {
+          "type": "string",
+          "description": "Short summary of latest items taken on credit (e.g., Milk, Bread, Biscuit)."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when customer was created (clients must write FieldValue.serverTimestamp())."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when customer was last updated (clients must write FieldValue.serverTimestamp())."
+        }
+      },
+      "required": [
+        "userId",
+        "name",
+        "phone",
+        "photoBase64",
+        "netBalance",
+        "totalUdhar",
+        "totalJama",
+        "lastItemsSummary",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "TransactionEntry": {
+      "title": "TransactionEntry",
+      "description": "An Udhar (credit given) or Jama (payment received) ledger transaction entry with items and photo.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The authenticated shopkeeper UID who owns this transaction."
+        },
+        "customerId": {
+          "type": "string",
+          "description": "ID of the customer associated with this transaction."
+        },
+        "customerName": {
+          "type": "string",
+          "description": "Denormalized name of the customer for fast history display."
+        },
+        "type": {
+          "type": "string",
+          "enum": ["UDHAR", "JAMA"],
+          "description": "Transaction type: UDHAR (credit given) or JAMA (payment received)."
+        },
+        "amount": {
+          "type": "integer",
+          "description": "Transaction amount in INR (1 to 1000000)."
+        },
+        "items": {
+          "type": "array",
+          "description": "List of Kirana items taken (e.g., Biscuit, Bread, Milk, Oil, Gutka)."
+        },
+        "note": {
+          "type": "string",
+          "description": "Additional remark or quantity details."
+        },
+        "photoBase64": {
+          "type": "string",
+          "description": "Compact Base64 photo of the customer/items/bill for proof."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when transaction was created (clients must write FieldValue.serverTimestamp())."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when transaction was updated (clients must write FieldValue.serverTimestamp())."
+        }
+      },
+      "required": [
+        "userId",
+        "customerId",
+        "customerName",
+        "type",
+        "amount",
+        "items",
+        "note",
+        "photoBase64",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/customers/{customerId}": {
+      "schema": {
+        "$ref": "#/entities/Customer"
+      },
+      "description": "Per-shopkeeper customer khata profiles and running balances."
+    },
+    "/users/{userId}/transactions/{transactionId}": {
+      "schema": {
+        "$ref": "#/entities/TransactionEntry"
+      },
+      "description": "Per-shopkeeper chronological udhar and jama transactions."
+    }
+  }
+}

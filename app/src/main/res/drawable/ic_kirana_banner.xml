@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="160dp"
+    android:viewportWidth="360"
+    android:viewportHeight="160">
+    <!-- Rich Kirana Store Counter Banner Illustration -->
+    <path android:pathData="M0,0h360v160h-360z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="0"
+                android:startY="0"
+                android:endX="360"
+                android:endY="160"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#064E3B" />
+                <item android:offset="0.55" android:color="#065F46" />
+                <item android:offset="1.0" android:color="#0F766E" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Decorative warm golden awning stripes at top -->
+    <path android:fillColor="#D97706" android:pathData="M0,0h30v14c0,6 -6,10 -15,10S0,20 0,14V0z" />
+    <path android:fillColor="#FEF3C7" android:pathData="M30,0h30v14c0,6 -6,10 -15,10S30,20 30,14V0z" />
+    <path android:fillColor="#D97706" android:pathData="M60,0h30v14c0,6 -6,10 -15,10S60,20 60,14V0z" />
+    <path android:fillColor="#FEF3C7" android:pathData="M90,0h30v14c0,6 -6,10 -15,10S90,20 90,14V0z" />
+    <path android:fillColor="#D97706" android:pathData="M120,0h30v14c0,6 -6,10 -15,10S120,20 120,14V0z" />
+    <path android:fillColor="#FEF3C7" android:pathData="M150,0h30v14c0,6 -6,10 -15,10S150,20 150,14V0z" />
+    <path android:fillColor="#D97706" android:pathData="M180,0h30v14c0,6 -6,10 -15,10S180,20 180,14V0z" />
+    <path android:fillColor="#FEF3C7" android:pathData="M210,0h30v14c0,6 -6,10 -15,10S210,20 210,14V0z" />
+    <path android:fillColor="#D97706" android:pathData="M240,0h30v14c0,6 -6,10 -15,10S240,20 240,14V0z" />
+    <path android:fillColor="#FEF3C7" android:pathData="M270,0h30v14c0,6 -6,10 -15,10S270,20 270,14V0z" />
+    <path android:fillColor="#D97706" android:pathData="M300,0h30v14c0,6 -6,10 -15,10S300,20 300,14V0z" />
+    <path android:fillColor="#FEF3C7" android:pathData="M330,0h30v14c0,6 -6,10 -15,10S330,20 330,14V0z" />
+
+    <!-- Subtle glowing sun/circle on right -->
+    <path
+        android:fillColor="#1AFFFFFF"
+        android:pathData="M295,88m-58,0a58,58 0,1 1,116 0a58,58 0,1 1,-116 0" />
+
+    <!-- Kirana Shelf & Items on Right Side -->
+    <path android:fillColor="#F59E0B" android:pathData="M236,126h108v6h-108z" />
+    <!-- Milk pouch / bottle -->
+    <path android:fillColor="#FFFFFF" android:pathData="M246,92h18v34h-18z" />
+    <path android:fillColor="#38BDF8" android:pathData="M249,102h12v10h-12z" />
+    <!-- Bread loaf -->
+    <path android:fillColor="#FBBF24" android:pathData="M270,98h24v28h-24z" />
+    <path android:fillColor="#B45309" android:pathData="M268,94h28v8h-28z" />
+    <!-- Cooking Oil Jar -->
+    <path android:fillColor="#FDE047" android:pathData="M300,86h20v40h-20z" />
+    <path android:fillColor="#DC2626" android:pathData="M304,80h12v6h-12z" />
+    <!-- Red Bahi Khata Ledger Book -->
+    <path android:fillColor="#EF4444" android:pathData="M325,90h16v36h-16z" />
+    <path android:fillColor="#FEF08A" android:pathData="M329,98h8v14h-8z" />
+</vector>

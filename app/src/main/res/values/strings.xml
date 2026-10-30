@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Santosh Khata</string>
+    <string name="store_title">संतोष किराना स्टोर</string>
+    <string name="store_subtitle">Santosh Kirana Store • Digital Udhar Khata</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="auth_welcome_title">Santosh Kirana Store\nDigital Udhar Khata</string>
+    <string name="auth_welcome_desc">रोज़ का उधार (दूध, ब्रेड, बिस्कुट, तेल, गुटखा आदि) ग्राहक के नाम, रकम और फोटो के साथ सुरक्षित क्लाउड खाते में सेव करें।</string>
+    <string name="tab_customers">ग्राहक खाता (Customers)</string>
+    <string name="tab_history">रोज़ाना हिसाब (History)</string>
+    <string name="tab_items">सामान रेट (Kirana Items)</string>
+    <string name="total_udhar_baki">कुल उधार बाकी (You Will Get)</string>
+    <string name="total_jama_received">कुल जमा प्राप्त (Total Received)</string>
+    <string name="add_customer">नया ग्राहक जोड़ें (+ Customer)</string>
+    <string name="give_udhar">उधार दें (Give Udhar)</string>
+    <string name="receive_jama">जमा लें (Receive Jama)</string>
+    <string name="search_customers_hint">ग्राहक का नाम या फोन नंबर खोजें…</string>
+    <string name="empty_customers_title">अभी कोई ग्राहक खाता नहीं है</string>
+    <string name="empty_customers_subtitle">नीचे "+ नया ग्राहक" बटन दबाकर अपना पहला उधार खाता जोड़ें</string>
+    <string name="customer_name_label">ग्राहक का नाम (Customer Name)</string>
+    <string name="customer_phone_label">मोबाइल नंबर / पहचान (Phone / Note)</string>
+    <string name="amount_label">रकम ₹ (Amount)</string>
+    <string name="note_label">विवरण / नोट (Optional Note)</string>
+    <string name="pick_photo">फोटो चुनें (Gallery)</string>
+    <string name="take_photo">कैमरा से फोटो लें (Camera)</string>
+    <string name="save_button">सेव करें (Save)</string>
+    <string name="cancel_button">रद्द करें (Cancel)</string>
+    <string name="sign_out">लॉग आउट (Sign Out)</string>
+</resources>
